@@ -1,0 +1,112 @@
+{
+  "errors": [],
+  "warnings": [],
+  "version": "4.43.0",
+  "hash": "096cf083a1f950531773",
+  "publicPath": "/static/",
+  "outputPath": "/home/aaron/Documentos/mydev/ramirezaaron.v2/build/static",
+  "assetsByChunkName": {
+    "list": "list.module.js",
+    "ramirezaaron.v2": [
+      "ramirezaaron.v2.module.js",
+      "ramirezaaron.v2.f9da1e5cf49dd0a051ad.hot-update.js"
+    ]
+  },
+  "assets": [
+    {
+      "name": "f9da1e5cf49dd0a051ad.hot-update.json",
+      "size": 57,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "list.module.js",
+      "size": 47861,
+      "chunks": [
+        "list"
+      ],
+      "chunkNames": [
+        "list"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "ramirezaaron.v2.f9da1e5cf49dd0a051ad.hot-update.js",
+      "size": 14182,
+      "chunks": [
+        "ramirezaaron.v2"
+      ],
+      "chunkNames": [
+        "ramirezaaron.v2"
+      ],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "ramirezaaron.v2.module.js",
+      "size": 5026037,
+      "chunks": [
+        "ramirezaaron.v2"
+      ],
+      "chunkNames": [
+        "ramirezaaron.v2"
+      ],
+      "info": {},
+      "emitted": false
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "ramirezaaron.v2": {
+      "chunks": [
+        "ramirezaaron.v2"
+      ],
+      "assets": [
+        "ramirezaaron.v2.module.js",
+        "ramirezaaron.v2.f9da1e5cf49dd0a051ad.hot-update.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "namedChunkGroups": {
+    "ramirezaaron.v2": {
+      "chunks": [
+        "ramirezaaron.v2"
+      ],
+      "assets": [
+        "ramirezaaron.v2.module.js",
+        "ramirezaaron.v2.f9da1e5cf49dd0a051ad.hot-update.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "list": {
+      "chunks": [
+        "list"
+      ],
+      "assets": [
+        "list.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "logging": {
+    "webpack.buildChunkGraph.visitModules": {
+      "entries": [],
+      "filteredEntries": 5,
+      "debug": false
+    }
+  },
+  "children": []
+}
