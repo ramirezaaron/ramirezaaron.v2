@@ -1,22 +1,37 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
+export default function Home({ data }){
+  return(<Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+    { 
+      data.allWordpressPage.edges.map(({ node }) => (
+        <div key={node.id}>
+          <h5>{node.title}</h5>
+          <div dangerouslySetInnerHTML={{__html: node.content}} />
+        </div>
+      ))
+    }
   </Layout>
-)
+  )
+}
 
-export default IndexPage
+export const pageQuery = graphql`
+query {
+  allWordpressPage(filter: {id: {eq: "ecc941e1-75b4-5595-a302-3ec5c01de9eb"}}) {
+    edges {
+      node {
+        id
+        guid
+        title
+        content
+        slug
+        date(formatString: "MMMM DD, YYYY")
+      }
+    }
+  }
+}
+`
