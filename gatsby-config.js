@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Aarón Ramírez | Developer`,
     description: `Hi! This is my personal website.`,
-    author: `@gatsbyjs`,
+    author: `Aarón Ramírez`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -24,7 +24,7 @@ module.exports = {
         background_color: `#f08200`,
         theme_color: `#f08200`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
     {
