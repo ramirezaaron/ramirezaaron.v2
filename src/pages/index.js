@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -10,8 +10,9 @@ export default function Home({ data }){
     { 
       data.allWordpressPage.edges.map(({ node }) => (
         <div key={node.id}>
-          <h5>{node.title}</h5>
+          <h2 className="text-center">{node.title}</h2>
           <div dangerouslySetInnerHTML={{__html: node.content}} />
+          <Link to="/page">Home</Link>
         </div>
       ))
     }
