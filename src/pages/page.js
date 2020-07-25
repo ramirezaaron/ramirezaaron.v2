@@ -18,8 +18,9 @@ export default function Page({ data }){
   </Layout>)
 }
 
+// Se asigna $slug = "hello" porque es la página inicial 
 export const pageQuery = graphql` 
-query ($slug: String = "") {
+query ($slug: String = "hello") {
   allWordpressPage(filter: {slug: {eq: $slug}}) {
     edges {
       node {
