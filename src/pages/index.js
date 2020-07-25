@@ -12,7 +12,6 @@ export default function Home({ data }){
         <div key={node.id}>
           <h2 className="text-center">{node.title}</h2>
           <div dangerouslySetInnerHTML={{__html: node.content}} />
-          <Link to="/page">Home</Link>
         </div>
       ))
     }
