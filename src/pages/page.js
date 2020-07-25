@@ -19,7 +19,7 @@ export default function Page({ data }){
 }
 
 export const pageQuery = graphql` 
-query ($slug: String!) {
+query ($slug: String = "") {
   allWordpressPage(filter: {slug: {eq: $slug}}) {
     edges {
       node {
