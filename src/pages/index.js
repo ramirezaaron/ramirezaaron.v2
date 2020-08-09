@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -21,7 +21,7 @@ export default function Home({ data }){
 
 export const pageQuery = graphql`
 query {
-  allWordpressPage(filter: {id: {eq: "ecc941e1-75b4-5595-a302-3ec5c01de9eb"}}) {
+  allWordpressPage(filter: {id: {eq: "b2bc8880-d4cc-5009-b979-b9b6aecb6f46"}}) {
     edges {
       node {
         id
