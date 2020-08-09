@@ -21,31 +21,30 @@ const Layout = ({ children }) => {
           title
         }
       }
-      allWordpressPage {
-        edges {
-          node {
-            id
+      
+      allWordpressWpApiMenusMenusItems {
+        nodes {
+          items {
+            url
             title
-            slug
-            menu_order
+            order
+            object_slug
           }
         }
       }
     }
   `)
 
+  const siteTitle = data.site.siteMetadata.title
+  const menu = data.allWordpressWpApiMenusMenusItems.nodes[0].items
+  menu.sort((a,b) => (a.order > b.order) ? 1 : ((b.order < a.order) ? -1 : 0)); 
 
-  const menu = data.allWordpressPage.edges
-  menu.sort((a,b) => (a.node.menu_order > b.node.menu_order) ? 1 : ((b.node.menu_order < a.node.menu_order) ? -1 : 0)); 
   return (
     <>
       {/*<Header style={{ textAlign: 'center'}} siteTitle={data.site.siteMetadata.title} />*/}
-      <Menu menu={menu} />
-      <div
+      <Menu menu={menu} siteTitle={siteTitle} />
+      <div className="main-container"
         style={{
-          margin: `0 auto`,
-          maxWidth: "60%",
-          padding: `0 1.0875rem 1.45rem`,
         }}
       >
         <main>{children}</main>
