@@ -14,9 +14,9 @@ export default function Page({ data }){
     <h2 className="text-center"> {page.title} </h2>
     <div dangerouslySetInnerHTML={{__html: page.content}} />
 
-    <Footer rightContent={ lastUpdated } />
   </Layout>)
 }
+//<Footer rightContent={ lastUpdated } />
 
 // Se asigna $slug = "hello" porque es la página inicial 
 export const pageQuery = graphql` 
